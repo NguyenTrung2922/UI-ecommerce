@@ -50,7 +50,7 @@ const Header = () => {
                 <div className='flex items-center w-1/12'>
                     {/* <MenuIcon className="h-6 w-6 text-white cursor-pointer" /> */}
                     <div className="text-white font-medium text-3xl text-center cursor-pointer">
-                        HTShops
+                    <Link to='/'>HTShops</Link>
                     </div>
                 </div>
 
@@ -65,7 +65,7 @@ const Header = () => {
             </div>
 
             <ul className="flex space-x-10 w-full justify-center text-white font-light text-sm mt-3">
-                <li className="list-none cursor-pointer"><Link to='/home'>Đồ Taobao</Link></li>
+                <li className="list-none cursor-pointer"><Link to='/product'>Đồ Taobao</Link></li>
                 <li className="list-none cursor-pointer"><Link to='/product'>Dép nữ</Link></li>
                 <li className="list-none cursor-pointer">Săn Sale Iphone</li>
                 <li className="list-none cursor-pointer">Áo phông</li>

@@ -7,6 +7,7 @@ import PhoneImg from '../../../assets/images/phone-call.png'
 import InternetImg from '../../../assets/images/provider.png'
 import VoucherImg from '../../../assets/images/voucher.png'
 import SaleImg from '../../../assets/images/sale.png'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 const HomePage = () => {
     const images = [
         'https://cf.shopee.vn/file/vn-50009109-508b1467131bfd7543a0d7fcdccaa88b_xxhdpi',
@@ -179,7 +180,11 @@ const HomePage = () => {
 
             <div className='bg-gray-100 w-full py-8 px-14'>
                 <div className='bg-white'>
-                    <p className='text-xl font-medium p-4'>Danh mục</p>
+                    <div className='flex justify-between items-center font-medium p-4 border-b-2 border-red-600'>
+                        <p className='text-xl text-red-600 '>Danh mục</p>
+                        <p className='text-sm text-red-600'>Xem thêm<ChevronRightIcon /></p>
+                    </div>
+
                     {categoryGrid}
                 </div>
 
@@ -187,7 +192,10 @@ const HomePage = () => {
 
             <div className='bg-gray-100 w-full px-14'>
                 <div className='bg-white'>
-                    <p className='text-xl font-medium p-4'>Giảm giá SỐC</p>
+                    <div className='flex justify-between items-center font-medium p-4 border-b-2 border-red-600'>
+                        <p className='text-xl text-red-600 '>Giảm giá SỐC</p>
+                        <p className='text-sm text-red-600'>Xem thêm<ChevronRightIcon /></p>
+                    </div>
                     {productGrid}
                 </div>
             </div>
@@ -198,7 +206,10 @@ const HomePage = () => {
 
             <div className='bg-gray-100 w-full px-14'>
                 <div className='bg-white'>
-                    <p className='text-xl font-medium p-4'>Tìm kiếm nhiều nhất</p>
+                    <div className='flex justify-between items-center font-medium p-4 border-b-2 border-red-600'>
+                        <p className='text-xl text-red-600 '>Tìm kiếm nhiều nhất</p>
+                        <p className='text-sm text-red-600'>Xem thêm<ChevronRightIcon /></p>
+                    </div>
                     {productGrid}
                 </div>
             </div>
@@ -207,6 +218,9 @@ const HomePage = () => {
                 <div className='bg-white'>
                     <p className='text-xl font-medium p-4 text-center mb-1 border-b-4 border-red-600 text-red-600'>Gợi ý hôm nay</p>
                     {listProductGrid}
+                </div>
+                <div className='bg-white mt-4'>
+                    <p className='text-md text-red-600 text-center p-3'>Xem thêm</p>
                 </div>
             </div>
 
