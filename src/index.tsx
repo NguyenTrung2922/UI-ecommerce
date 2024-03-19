@@ -11,7 +11,8 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import UserLayout from './layouts/UserLayout/UserLayout';
 import HomePage from './pages/Web/HomePage/HomePage';
 import ProductPage from './pages/Web/ProductPage/ProductPage';
-
+import ListProducts from './pages/Web/ListProducts/ListProducts';
+import ListShops from './pages/Web/ListShops/ListShops';
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
@@ -19,8 +20,21 @@ const router = createBrowserRouter([
     path: "/",
     element: <UserLayout />,
     children: [
-      { path: "home", element: <HomePage /> },
-      { path: "product", element: <ProductPage /> }
+      { path: "/", element: <HomePage /> },
+      {
+        path: "product",
+        element: <ProductPage />,
+        children: [
+          {
+            path: '',
+            element: <ListProducts />
+          },
+          {
+            path: 'list-shops',
+            element: <ListShops />
+          }
+        ]
+      }
     ]
   },
   {
